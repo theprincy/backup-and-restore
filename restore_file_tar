@@ -1,0 +1,47 @@
+1) To untar all *.tar.gz file, enter:
+
+$ cat *.tar.gz | tar -xvzf - -i 
+
+OR
+$ tar xvf *.gz
+
+OR
+$ tar -zxvf *.tar.gz
+
+OR
+$ tar xvf "*.gz"
+
+OR
+$ tar -zxvf '*.gz'
+
+
+2) Untar multiple tarballs using bash 
+
+for f in *.tar.gz; do tar xf "$f"; done
+
+OR
+for f in *.tar.gz; do tar -xvf "$f"; done
+
+OR
+for f in *.tgz; do tar -xzvf "$f"; done
+
+OR
+for f in *.tar.bz2; do tar -xvf "$f"; done
+
+OR
+for f in *.tar.bz2; do tar -xjvf "$f"; done
+
+OR
+for f in *.tar.xz; do tar -xvf "$f"; done
+
+OR
+for f in *.tar.xz; do tar -xvJf "$f"; done
+
+
+3 ) Untar multiple tarballs using bash/sh/ksh pipes
+
+The syntax is:
+cat *.tar.gz | tar zxvf - -i
+cat *.tgz | tar zxvf - -i
+cat *.tar.xz | tar Jxvf - -i
+cat *.tar.bz2 | tar jxvf - -i
