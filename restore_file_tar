@@ -1,6 +1,6 @@
 1) To untar all *.tar.gz file, enter:
 
-$ cat *.tar.gz | tar -xvzf - -i 
+$ cat *.tar.gz | tar -xvzf - -i  -C   /name_directory
 
 OR
 $ tar xvf *.gz
